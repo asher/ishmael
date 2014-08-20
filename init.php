@@ -52,7 +52,7 @@ function format_xskip($hours){
 		$result = mysql_query($q);
 		$rows = array();
 		while ($row = mysql_fetch_row($result)) {
-			preg_match('/^([a-z0-9.-]+)_.*/', $row[0], $match);
+			preg_match('/^([\w]+)_query.*/', $row[0], $match);
 			if ($match[1]) {
 				$host = $match[1];
 				$hosts[$host] = $host;
